@@ -44,16 +44,16 @@ import java.lang.Exception
 
 class MainActivity : AppCompatActivity(), OnMapClickListener {
 
+    // map
     private lateinit var mapView: MapView
     private lateinit var mapboxMap: MapboxMap
 
-    private lateinit var location_lon: Array<Double>
-    private lateinit var location_lat: Array<Double>
-    private var array_iterator = 0
-
+    // animation
     private lateinit var geojsonSource: GeoJsonSource
     private var currentPoint = Point.fromLngLat(-117.17282, 32.71204)
     private var animator: ValueAnimator? = null
+    private var asset_speed_fast = 100
+    private var asset_speed_normal = 60
 
     // location queue
     private lateinit var location_lon_queue: MutableList<Double>
@@ -134,10 +134,10 @@ class MainActivity : AppCompatActivity(), OnMapClickListener {
         var speed = 0
         if(location_lat_queue.size > 0){
             // puck animation is behind location updates: speed up puck, but still stay realistic
-            speed = 100  // m/s = 360km/h
+            speed = asset_speed_fast  
         }else{
             // use actual speed of driver, or use realistic speed value
-            speed = 60
+            speed = asset_speed_normal
         }
 
 
