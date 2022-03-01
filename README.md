@@ -18,6 +18,9 @@ the location updates can be smoothed client side. This client side smoothing is 
 - A location update buffer
 - A location update distance dependent position indicator animation duration 
 
+![smooth](https://user-images.githubusercontent.com/43645757/153377103-42178adf-2843-4c14-b171-4fa1ea5cac54.gif)
+
+
 ### Location buffer
 A location buffer queue is deployed that is fed with location updates of the position indicator. This buffer queue passes out the next update event only
  after the distance dependent animation has finished. 
