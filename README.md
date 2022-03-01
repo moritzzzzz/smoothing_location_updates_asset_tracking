@@ -32,3 +32,18 @@ If the position indicator is behind (meaning that there are events queuing in th
  Once it has fetched up, the movement speed is reduced to the average speed again.
  
  This fixes unrealistic position jumps, even when the position indicator is behind the true location of the asset. (it will use a slightly faster, but still realistic speed to catch up with the asset)
+
+## Usage
+This example implements the above 2 techniques. It is listening for mapClick events. Each such event is regarded as a location update event and is pushed into the location buffer.
+
+This example uses exaggerated speed values to better display the impact. 
+
+These speed values are in m/s and should be adjusted to realistic values:
+```
+    private var asset_speed_fast = 100
+    private var asset_speed_normal = 60
+```
+
+### Add you Mapbox Access Token
+Your Mapbox Access Token would have to be added to `strings.xml`
+
