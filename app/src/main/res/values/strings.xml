@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">smoothing_location_updates</string>
+    <string name="mapbox_access_token">ACCESS_TOKEN</string>
+</resources>
